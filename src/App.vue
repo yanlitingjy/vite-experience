@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="app-main">
-        <el-card class="box-card">
+        <el-card>
             <el-form :model="form" label-width="120px">
                 <el-form-item label="Activity name">
                     <el-input v-model="form.name" />
@@ -47,6 +47,12 @@
                     <el-button>Cancel</el-button>
                 </el-form-item>
             </el-form>
+            <div class="relative bg-white h-full p-10px mt-30px">
+                <div class="flex justify-center p-10px text-18px m-15px bg-hex-F2F2F2">
+                    <text class="text-hex-C75450">这里是第一个盒子</text>
+                    <text class="text-hex-5188BA ml-5px">这里是第二行文字</text>
+                </div>
+            </div>
         </el-card>
         
     </div>

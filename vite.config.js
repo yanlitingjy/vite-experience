@@ -5,10 +5,12 @@ import AutoImport from 'unplugin-auto-import/vite'   // 使用后可以不手动
 import Components from 'unplugin-vue-components/vite' // 无需自己引入组件
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // 可以不需要手动引入组件，能够让开发者就像全局组件那样进行开发，但实际上又是按需引入，且不限制打包工具，不需要使用 babel
 import { fileURLToPath, URL } from 'node:url'
+import WindiCSS from 'vite-plugin-windicss'
 
 export default defineConfig({
     plugins: [
         vue(),
+        WindiCSS(),
         AutoImport({
             resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
             imports: [
